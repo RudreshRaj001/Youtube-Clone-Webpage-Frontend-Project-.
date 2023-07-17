@@ -43,13 +43,73 @@
 }
 .video-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .video-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 750px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .linkss{
   color: inherit; 
   text-decoration:none;
   
+}
+
+.video-profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.video-profile .tooltip{
+  font-family: Roboto, Arial;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px  10px;
+  border-radius: 5px;
+  font-size: 12px;
+  bottom: -10px;
+  right: -120px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+  display: flex;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  align-items: center;
+}
+.video-profile:hover .tooltip{
+  opacity: 1;
+}
+.video-profile .tooltip .name-nall{
+  margin-left: 10px;
+}
+.video-profile .tooltip .name-nall .chaannel-name{
+  font-weight: bold;
+}
+.video-profile .tooltip .name-nall .subscriber-countt {
+  color: gray;
 }
