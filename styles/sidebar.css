@@ -28,3 +28,32 @@
   font-family: Roboto,Arial;
   font-size: 10px;
 }
+@media (min-width: 1100px) {
+  .sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width: 150px;
+    z-index: 200;
+    padding-top: 5px;
+  }
+  .sidebar-link{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    position: static;
+    justify-content: start;
+  }
+  .sidebar-link img {
+    position: relative;
+    left: 16px;
+    margin-bottom: 4px;
+  }
+  .sidebar-link div {
+    position: relative;
+    left: 20px;
+  }
+}
